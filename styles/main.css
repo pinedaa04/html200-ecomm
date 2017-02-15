@@ -1,0 +1,63 @@
+.item-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.container {
+  margin: auto;
+}
+nav {
+  text-align: center;
+  width: 100%;
+}
+
+nav li {
+  display: inline;
+  font-size: 1.1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding: 0.5rem 2rem 0.7rem 2rem;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+  color: #7B68EE;
+  font-size: 2rem;
+}
+
+h1 {
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Sansita', sans-serif;
+}
+
+header {
+  padding: 1rem;
+}
+
+img {
+  width: 15em;
+  height: 20rem
+}
+
+nav, h4, h5, p {
+  font-family: 'Sansita', sans-serif;
+}
+
+h4{
+  font-weight: bold;
+}
+p{
+  color: #6A5ACD;
+}
+/ {
+  font-size: 0.8rem;
+}
