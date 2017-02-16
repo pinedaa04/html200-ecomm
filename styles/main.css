@@ -18,6 +18,12 @@ nav li {
   font-size: 1.1rem;
 }
 
+li a:hover {
+    color: #F8B28B;
+    font-size: 25px;
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
+}
 nav ul {
   display: flex;
   flex-direction: row;
