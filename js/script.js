@@ -55,3 +55,8 @@ var products = [
 //  console.log(products[i].price);
 //  console.log(products[i].description);
 //}
+//JS form handler function to be triggered on form submit
+function capture () {
+  console.log(document.scarfInfo.filter.value);
+  event.preventDefault();
+}
