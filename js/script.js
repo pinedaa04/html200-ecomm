@@ -57,6 +57,6 @@ var products = [
 //}
 //JS form handler function to be triggered on form submit
 function capture () {
-  console.log(document.scarfInfo.filter.value);
+  console.log(document.filter.name.value);
   event.preventDefault();
 }
