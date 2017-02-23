@@ -48,6 +48,17 @@ var products = [
     "imageTitle": "twill.jpg"
   }
 ]
+
+//work on later, we worked on this in class
+function sumPrices(cartArray){
+  // for loop through array, sum value of price attribute for each object  
+  var total = 0;
+  for(var i=0; i<cartArray.length; i++){
+    console.log(cartArray[i].price);
+    total = total + console.log(cartArray[i].price);
+  }
+  console.log(total);
+}
 //ADD JSON LOOP
 
 //for (var i = 0; i < products.length; i++) {
@@ -56,7 +67,7 @@ var products = [
 //  console.log(products[i].description);
 //}
 //JS form handler function to be triggered on form submit
-function capture () {
-  console.log(document.filter.name.value);
-  event.preventDefault();
-}
+//function capture () {
+//  console.log(document.filter.name.value);
+//  event.preventDefault();
+//}
