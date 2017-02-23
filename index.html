@@ -37,7 +37,7 @@
   </header>
 
   <aside>
-       <form name="filter" onsubmit="capture();">
+    <form name="filter" onSubmit="filterProducts();">
       <label>Filter By:
         <select name="filter">
           <option value="">Choose One</option>
@@ -52,80 +52,108 @@
 
   <section>
     <h2>Scarves</h2>
-    <br>
+    
     <div class="item-container">
         <div class="row">
           <div class="item">
         <div class="col-sm-12 col-md-4 col-lg-3">
           <h4>Ombre Infinity</h4>
-          <img src="images/ombre-infinity.jpg" alt="Brown Ombre Scarf"/>
+            <div class="photo-frame">
+          <img srcset="images/ombre-infinity100.jpg 100w, images/ombre-infinity200.jpg 200w, images/ombre-infinity300.jpg 300w"
+            sizes="(max-width: 800px) 100px, (max-width: 1600px) 200px, (min-width: 1601px) 300px"
+            src="images/ombre-infinity.jpg" alt="Brown Ombre Scarf"/>
+          </div>
         <h5>$11.99</h5>
         <p>A dip-dye effect adds color and dimension to a cozy infinity scarf featuring a soft, chunky knit. 100% acrylic.</p>
         </div>
           </div>
-        <br>
+      
         <div class="col-sm-12 col-md-4 col-lg-3">
         <div class="item">
           <h4>Wool Cable Knit</h4>
-          <img src="images/wool-cable.jpeg" alt="Wool Sweater"/>
+          <div class="photo-frame">
+          <img srcset="images/wool-cable100.jpeg 100w, images/wool-cable200.jpeg 200w, images/wool-cable300.jpeg 300w"
+            sizes="(max-width: 800px) 100px, (max-width: 1600px) 200px, (min-width: 1601px) 300px"
+            src="images/wool-cable.jpeg" alt="Wool Scarf"/>
+            </div>
           <h5>$49.99</h5>
           <p>Warm yourself with this women's natural cable knit scarf, crafted from 100% Merino wool. Imported.</p>
         </div>
           </div>
-        <br>
+          
         <div class="col-sm-12 col-md-4 col-lg-3">
         <div class="item">
           <h4>Northern Lights</h4>
-          <img src="images/northern-lights.jpg" alt="Photo of a colorful scarf"/>
+            <div class="photo-frame">
+          <img srcset="images/northern-lights100.jpg 100w, images/northern-lights200.jpg 200w, images/northern-lights300.jpg 300w"
+            sizes="(max-width: 800px) 100px, (max-width: 1600px) 200px, (min-width: 1601px) 300px"
+            src="images/northern-lights.jpg" alt="Photo of a colorful scarf"/>
+          </div>
           <h5>$29.99</h5>
           <p>Handmade by women in Agra, sales provide medical and educational support in this remote area of India. Crinkly 100% cotton.</p>
             </div>
         </div>
-        <br>
+          
         <div class="col-sm-12 col-md-4 col-lg-3">
         <div class="item">
           <h4>Reversible Plaid</h4>
-          <img src="images/reversible-plaid.jpg" alt="Plaid Resersible Red and White Scarf"/>
+           <div class="photo-frame">
+               <img srcset="images/reversible-plaid100.jpg 100w, images/reversible-plaid200.jpg 200w, images/reversible-plaid300.jpg 300w" 
+                sizes="(max-width: 800px) 100px, (max-width: 1600px) 200px, (min-width: 1601px) 300px"
+                src="images/reversible-plaid.jpg" alt="Plaid Resersible Red and White Scarf"/>
+              </div>
           <h5>$26.99</h5>
           <p>Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</p>
         </div>
           </div>
         
-        <br>
         <div class="col-sm-12 col-md-4 col-lg-3">
         <div class="item">
           <h4>Fringed Plaid</h4>
-          <img src="images/fringed-plaid.jpeg" alt="White Plaid Scarf"/>
+           <div class="photo-frame">
+          <img srcset="images/fringed-plaid100.jpeg 100w, images/fringed-plaid200.jpeg 200w, images/fringed-plaid300.jpeg 300w"
+            sizes="(max-width: 800px) 100px, (max-width: 1600px) 200px, (min-width: 1601px) 300px"
+            src="images/fringed-plaid.jpg" alt=" White and Grey Plaid Scarf"/>
+          </div>
           <h5>$19.99</h5>
           <p>Generously sized, extra soft and featuring a dazzling fringe, this scarf is rendered in a versatile gray, black and white plaid. Expertly beat the cold with style. 100% acrylic.</p>
         </div>
           </div>
           
-        <br>
         <div class="col-sm-12 col-md-4 col-lg-3">
         <div class="item">
           <h4>Multi Color</h4>
-          <img src="images/multi-color.jpeg" alt="Multi Color Scarf"/>
+            <div class="photo-frame">
+          <img srcset="images/multi-color100.jpeg 100w, images/multi-color200.jpeg 200w, images/multi-color300.jpeg 300w"
+            sizes="(max-width: 800px) 100px, (max-width: 1600px) 200px, (min-width: 1601px) 300px"
+            src="images/multi-color.jpeg" alt="Multi Color Scarf"/>
+          </div>
           <h5>$22.99</h5>
           <p>The Who What Wear Oversize Color-Block Square Scarf is big, bold, and designed to twist and wrap any way you wish. All the colors of the season are harmonized in this oversize accent, so you can adjust to contrast or match your outfit; soft and lush, it’s your stylish standoff against cold AC and unexpected fall breezes. 100% acrylic.</p>
         </div>
           </div>
         
-        <br>
         <div class="col-sm-4 col-md-4 col-lg-3">
         <div class="item">
           <h4>Etro Paisley Print Silk</h4>
-          <img src="images/etro.png" alt="Blue Paisley Silk Scarf"/>
+          <div class="photo-frame">
+          <img srcset="images/etro100.png 100w, images/etro200.png 200w, images/etro300.png 300w" 
+             sizes="(max-width: 800px) 100px, (max-width: 1600px) 200px, (min-width: 1601px) 300px"
+            src="images/etro.jpg" alt="Blue Paisley Silk Scarf"/>
+             </div>
           <h5>$249.99</h5>
           <p>Luxurious silk scarf with subtle paisley pattern. 100% silk.</p>
         </div>
           </div>
-        
-        <br>
+    
         <div class="col-sm-4 col-md-4 col-lg-3">
         <div class="item">
           <h4>Ashby Twill</h4>
-          <img src="images/twill.jpg" alt="Twill Scarf"/>
+            <div class="photo-frame">
+            <img srcset="images/twill100.jpg 100w, images/twill200.jpg 200w, images/twill300.jpg 300w"
+              sizes="(max-width: 800px) 100px, (max-width: 1600px) 200px, (min-width: 1601px) 300px"
+              src="images/twill.jpg" alt="Twill Scarf"/>
+            </div>
           <h5>$70.99</h5>
           <p>Faribault brings you the Ashby Twill Scarf in Natural. Woven with a 'broken' twill technique, the Ashby Twill Scarf has a slight zigzag texture. Made in USA, this timeless scarf is crafted with luxurious merino wool and finished with heather gray fringe. 100% Merino wool.</p>
         </div>
@@ -142,4 +170,21 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
+  <footer>
+  <div class="col-sm-6 col-lg-4 col-centered">
+    <h6> Customer Service</h6>
+    <p>Returns and Exchanges</p>
+    </div>
+    <div class="col-sm-6 col-lg-4 col-centered">
+    <h6> About Us</h6>
+      <p>Nearest Store Location</p>
+      <p> Careers</p>
+    </div>
+    <div class="col-sm-6 col-lg-4 col-centered">
+    <h6>Follow Us</h6>
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+       <i class="fa fa-envelope" aria-hidden="true"></i>
+       <i class="fa fa-pinterest" aria-hidden="true"></i>
+    </div>
+  </footer>
 </html>
