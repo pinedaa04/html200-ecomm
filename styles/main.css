@@ -1,8 +1,27 @@
+.container-fluid {
+  margin: auto;
+  
+}
+body{
+    font-family: 'Sansita', sans-serif;
+}
 .item-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: flex-start;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.item {
+  
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  display: block;
 }
 
 .container {
@@ -22,7 +41,7 @@ li a:hover {
     color: #F8B28B;
     font-size: 25px;
     transition-duration: .2s;
-    transition-timing-function: ease-out;
+    transition-timing-function: ease-in;
 }
 nav ul {
   display: flex;
@@ -42,7 +61,12 @@ h1 {
   padding-top: 1rem;
   text-align: center;
   font-size: 2rem;
-  font-family: 'Sansita', sans-serif;
+  
+}
+h2{
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 1rem;
 }
 
 header {
@@ -54,9 +78,6 @@ img {
   height: 20rem
 }
 
-nav, h4, h5, p {
-  font-family: 'Sansita', sans-serif;
-}
 
 h4{
   font-weight: bold;
@@ -66,4 +87,7 @@ p{
 }
 / {
   font-size: 0.8rem;
+}
+footer p{
+  color:black;
 }
