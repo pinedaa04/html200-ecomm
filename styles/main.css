@@ -16,6 +16,12 @@ body{
   margin: auto;
   text-align: center;
 }
+
+@media screen and (max-width: 767px) {
+  .item-container {
+   max-width: 100%;
+  }
+}
 .item {
   
   justify-content: center;
@@ -24,6 +30,14 @@ body{
   display: block;
 }
 
+@media screen and (max-width: 767px) and (min-width: 551px) {
+  .item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto; 
+  }
+}
 .container {
   margin: auto;
 }
@@ -56,6 +70,15 @@ a {
   color: #7B68EE;
   font-size: 2rem;
 }
+@media screen and (max-width: 767px) and (min-width: 551px) {
+    .menu-list > .list-item {
+        border-width: 1px black;
+    }
+    .menu-list > .list-item,
+    .menu-list > .list-item a {
+        display: inline-block;
+    }
+}
 
 h1 {
   padding-top: 1rem;
@@ -72,12 +95,10 @@ h2{
 header {
   padding: 1rem;
 }
-
 img {
   width: 15em;
   height: 20rem
 }
-
 
 h4{
   font-weight: bold;
@@ -85,8 +106,13 @@ h4{
 p{
   color: #6A5ACD;
 }
-/ {
-  font-size: 0.8rem;
+@media screen and (max-width: 550px) {
+  p {
+    width: 100%; 
+    font-size: 1.2rem;
+    padding-top: 4rem;
+    font-size: 0.8rem;
+    font-weight: bold;
 }
 footer p{
   color:black;
