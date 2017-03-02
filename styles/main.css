@@ -1,9 +1,11 @@
+
 .container-fluid {
   margin: auto;
-  
 }
-body{
-    font-family: 'Sansita', sans-serif;
+
+aside {
+  padding-top: 1rem;
+  font-family: 'Sansita', sans-serif;
 }
 .item-container {
   display: flex;
@@ -17,21 +19,43 @@ body{
   text-align: center;
 }
 
-.item {
-  
-  justify-content: center;
-  text-align: center;
-  margin: auto;
-  display: block;
+@media screen and (max-width: 767px) {
+  .item-container {
+   max-width: 100%;
+  }
 }
 
+.item {
+  
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+  padding: 1rem; 
+  width: 90%;
+  height: 100%;
+  background-color: white;
+}
 
+@media screen and (max-width: 767px) and (min-width: 551px) {
+  .item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto; 
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
 .container {
   margin: auto;
 }
 nav {
   text-align: center;
   width: 100%;
+   font-family: 'Sansita', sans-serif;
 }
 
 nav li {
@@ -58,48 +82,86 @@ a {
   color: #7B68EE;
   font-size: 2rem;
 }
-@media screen and (min-width: 660px) {
-    .menu-list > .list-item {
-        border-width: 1px black;
-    }
-    .menu-list > .list-item,
-    .menu-list > .list-item a {
-        display: inline-block;
-    }
-}
-h1 {
-  padding-top: 1rem;
-  text-align: center;
-  font-size: 2rem;
-  
-}
-h2{
-  text-align: center;
-  font-size: 2rem;
-  padding-bottom: 1rem;
-}
 
+h1 {
+  text-align: center;
+  font-size: 3rem;
+   font-family: 'Sansita', sans-serif;
+  letter-spacing: 0.1rem;
+}
+ 
 header {
   padding: 1rem;
 }
+
 img {
-  width: 15em;
-  height: 20rem
+  max-width: 100%;
+  padding-top: 1rem;
+  margin: auto;
 }
 
-h4{
-  font-weight: bold;
-}
-p{
+h4 {
+  
+ font-family: 'Sansita', sans-serif;
   color: #6A5ACD;
-}
-@media screen and (max-width: 550px) {
-  p {
-    width: 100%; 
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  margin: auto;
+  letter-spacing: 0.05rem;
     font-size: 2rem;
-    font-size: 0.8rem;
+}
+
+h5 {
+  font-family: 'Sansita', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  bottom: 0;
+  padding: 1rem;
+  margin: auto;
+  letter-spacing: 0.05rem;
+}
+
+@media screen and (max-width: 767px) and (min-width: 551px) {
+  h5 {
+    padding-right: 1rem;
+    font-size: .5rem;
+  }
+}
+
+h2 {
+ font-family: 'Sansita', sans-serif;
+  color: black;
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+}
+
+p {
+  font-family: 'Sansita', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem;
+  letter-spacing: 0.04rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) and (min-width: 551px) {
+  p {
+    font-size: .5rem;
+    width: 50%;
+    margin: auto;
+  }
+
+.photo-frame {
+  height: 60%;
+  padding-bottom: 3rem;
+}
+ 
+  }
+  footer{
+    color: #6A5ACD;
+    font-family: 'Sansita', sans-serif;
     font-weight: bold;
-}
-footer p{
-  color:black;
-}
+  }
