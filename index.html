@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
    <title>Winter Scarves</title>
   <!-- Latest compiled and minified CSS -->
  
@@ -37,7 +38,7 @@
   </header>
 
   <aside>
-    <form name="filter" onSubmit="filterProducts();">
+    <form name="filter" onSubmit="capture();">
       <label>Filter By:
         <select name="filter">
           <option value="">Choose One</option>
@@ -52,23 +53,22 @@
 
   <section>
     <h2>Scarves</h2>
-    
-    <div class="item-container">
-        <div class="row">
+    <div class = "item-container">
+      <div class = "row">
+        <div class="col-sm-4 col-lg-3 col-centered">
           <div class="item">
-        <div class="col-sm-12 col-md-4 col-lg-3">
-          <h4>Ombre Infinity</h4>
+            <h4>Ombre Infinity</h4>
             <div class="photo-frame">
           <img srcset="images/ombre-infinity100.jpg 100w, images/ombre-infinity200.jpg 200w, images/ombre-infinity300.jpg 300w"
             sizes="(max-width: 800px) 100px, (max-width: 1600px) 200px, (min-width: 1601px) 300px"
             src="images/ombre-infinity.jpg" alt="Brown Ombre Scarf"/>
           </div>
-        <h5>$11.99</h5>
-        <p>A dip-dye effect adds color and dimension to a cozy infinity scarf featuring a soft, chunky knit. 100% acrylic.</p>
+            <p>Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</p>
+            <h5>$26.99</h5>
         </div>
           </div>
       
-        <div class="col-sm-12 col-md-4 col-lg-3">
+       <div class="col-sm-4 col-lg-3 col-centered">
         <div class="item">
           <h4>Wool Cable Knit</h4>
           <div class="photo-frame">
@@ -81,7 +81,7 @@
         </div>
           </div>
           
-        <div class="col-sm-12 col-md-4 col-lg-3">
+        <div class="col-sm-4 col-lg-3 col-centered">
         <div class="item">
           <h4>Northern Lights</h4>
             <div class="photo-frame">
@@ -94,7 +94,7 @@
             </div>
         </div>
           
-        <div class="col-sm-12 col-md-4 col-lg-3">
+        <div class="col-sm-4 col-lg-3 col-centered">
         <div class="item">
           <h4>Reversible Plaid</h4>
            <div class="photo-frame">
@@ -107,7 +107,7 @@
         </div>
           </div>
         
-        <div class="col-sm-12 col-md-4 col-lg-3">
+         <div class="col-sm-4 col-lg-3 col-centered">
         <div class="item">
           <h4>Fringed Plaid</h4>
            <div class="photo-frame">
@@ -120,7 +120,7 @@
         </div>
           </div>
           
-        <div class="col-sm-12 col-md-4 col-lg-3">
+        <div class="col-sm-4 col-lg-3 col-centered">
         <div class="item">
           <h4>Multi Color</h4>
             <div class="photo-frame">
@@ -133,7 +133,7 @@
         </div>
           </div>
         
-        <div class="col-sm-4 col-md-4 col-lg-3">
+        <div class="col-sm-4 col-lg-3 col-centered">
         <div class="item">
           <h4>Etro Paisley Print Silk</h4>
           <div class="photo-frame">
@@ -146,7 +146,7 @@
         </div>
           </div>
     
-        <div class="col-sm-4 col-md-4 col-lg-3">
+        <div class="col-sm-4 col-lg-3 col-centered">
         <div class="item">
           <h4>Ashby Twill</h4>
             <div class="photo-frame">
@@ -159,7 +159,8 @@
         </div>
           </div>
           </div>
-        </div>
+    </div>
+
     
     </section>
 
