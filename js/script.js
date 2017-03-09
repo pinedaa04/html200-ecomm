@@ -1,9 +1,9 @@
 var products = [
   {
-    "name": "Reversible Plaid",
-    "price": 26.99,
-    "description": "Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.",
-    "imageTitle": "reversible-plaid.jpg"
+    "name": "Ombre Infinity",
+    "price": 11.99,
+    "description": "A dip-dye effect adds color and dimension to a cozy infinity scarf featuring a soft, chunky knit. 100% acrylic.",
+    "imageTitle": "ombre-infinity.jpg"
   },
   {
     "name": "Wool Cable Knit",
@@ -18,10 +18,10 @@ var products = [
     "imageTitle": "northern-lights.jpg"
   },
   {
-    "name": "Ombre Infinity",
-    "price": 11.99,
-    "description": "A dip-dye effect adds color and dimension to a cozy infinity scarf featuring a soft, chunky knit. 100% acrylic.",
-    "imageTitle": "ombre-infinity.jpg"
+    "name": "Reversible Plaid",
+    "price": 26.99,
+    "description": "Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.",
+    "imageTitle": "reversible-plaid.jpg"
   },
   {
     "name": "Fringed Plaid",
@@ -50,15 +50,41 @@ var products = [
 ]
 
 //work on later, we worked on this in class
-function sumPrices(cartArray){
+var total = 0;
+function sumPrices(){
   // for loop through array, sum value of price attribute for each object  
-  var total = 0;
   for(var i=0; i<cartArray.length; i++){
     console.log(cartArray[i].price);
-    total = total + console.log(cartArray[i].price);
+    total = total + cartArray[i].price;
   }
+  //?!?POSSIBLY figure out total with shipping and tax?!?
   console.log(total);
 }
+//function to sort items by selecting attribute( name and price)
+
+function compareNames(a, b) {
+  products.sort(function(a,b){
+    var nameA = a.name.toUpperCase();
+    var nameB = b.name.toUpperCase();
+    //use toUpperCase since scarve names are upper case. there is no lower case names to worry about
+    if (nameA < nameB) {
+      return -1;
+  }
+    if (nameA > nameB) {
+    return 1;
+  }
+  return 0;
+})  
+  console.log(products.sort())
+}
+
+function comparePrice(a, b) {
+  products.sort(function(a,b) {
+    return a.price - b.price;
+});
+  console.log(products.sort())
+}
+
 //ADD JSON LOOP
 
 //for (var i = 0; i < products.length; i++) {
