@@ -49,42 +49,6 @@ var products = [
   }
 ]
 
-//work on later, we worked on this in class
-var total = 0;
-function sumPrices(){
-  // for loop through array, sum value of price attribute for each object  
-  for(var i=0; i<cartArray.length; i++){
-    console.log(cartArray[i].price);
-    total = total + cartArray[i].price;
-  }
-  //?!?POSSIBLY figure out total with shipping and tax?!?
-  console.log(total);
-}
-//function to sort items by selecting attribute( name and price)
-
-function compareNames(a, b) {
-  products.sort(function(a,b){
-    var nameA = a.name.toUpperCase();
-    var nameB = b.name.toUpperCase();
-    //use toUpperCase since scarve names are upper case. there is no lower case names to worry about
-    if (nameA < nameB) {
-      return -1;
-  }
-    if (nameA > nameB) {
-    return 1;
-  }
-  return 0;
-})  
-  console.log(products.sort())
-}
-
-function comparePrice(a, b) {
-  products.sort(function(a,b) {
-    return a.price - b.price;
-});
-  console.log(products.sort())
-}
-
 //ADD JSON LOOP
 
 //for (var i = 0; i < products.length; i++) {
@@ -97,3 +61,74 @@ function comparePrice(a, b) {
 //  console.log(document.filter.name.value);
 //  event.preventDefault();
 //}
+
+//work on later, we worked on this in class(cart sum)
+function sumPrices(cartArray) {
+  // for loop through array, sum value of price attribute for each object  
+  var total = 0;
+  for(var i=0; i<cartArray.length; i++) {
+    console.log(cartArray[i].price);
+    total = total + cartArray[i].price;
+  }
+  //?!?POSSIBLY figure out total with shipping and tax?!?
+  console.log(total);
+}
+
+//js to add and delete items from cart
+var cartArray;
+cartArray = [];
+function addButton(scarfName) {
+ for (var i = 0; i < products.length; i++) {
+   if (products[i].name == scarfName) {
+    cartArray.push(products[i]);
+     console.log(cartArray[i].name);
+   }
+ } 
+  console.log(cartArray.length);
+}
+function removeButton(scarfName) {
+  for (var i = 0; i < cartArray.length; i++) {
+   if (cartArray[i].name == scarfName) {
+    cartArray.splice(i, 1);
+      console.log(cartArray.length);
+     return;
+   }
+ } 
+}
+
+
+//function to sort items by selecting attribute( price and name)
+function comparePrice(a, b) {
+  if (a.price < b.price) {
+    return -1;
+  }
+  if (a.price > b.price) {
+    return 1;
+  }
+  return 0;
+}
+
+function compareName(a, b) {
+  if (a.name < b.name) {
+    return -1;
+  }
+  if (a.name > b.name) {
+    return 1;
+  }
+  return 0;
+}
+
+function filterProducts() {
+  var sort_type = document.sortingFilter.filter.value;
+  if (sort_type == "price") {
+    console.log("Sorting By Price");
+    products.sort(comparePrice);
+  }
+  else if (sort_type == "name") {
+    console.log("Sorting By Name");
+    products.sort(compareName);
+  }
+  console.log(products);
+  event.preventDefault();
+}
+
