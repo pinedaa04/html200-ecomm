@@ -1,9 +1,9 @@
 var products = [
-  {
-    "name": "Ombre Infinity",
-    "price": 11.99,
-    "description": "A dip-dye effect adds color and dimension to a cozy infinity scarf featuring a soft, chunky knit. 100% acrylic.",
-    "imageTitle": "ombre-infinity.jpg"
+   {
+    "name": "Reversible Plaid",
+    "price": 26.99,
+    "description": "Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.",
+    "imageTitle": "reversible-plaid.jpg"
   },
   {
     "name": "Wool Cable Knit",
@@ -18,10 +18,10 @@ var products = [
     "imageTitle": "northern-lights.jpg"
   },
   {
-    "name": "Reversible Plaid",
-    "price": 26.99,
-    "description": "Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.",
-    "imageTitle": "reversible-plaid.jpg"
+    "name": "Ombre Infinity",
+    "price": 11.99,
+    "description": "A dip-dye effect adds color and dimension to a cozy infinity scarf featuring a soft, chunky knit. 100% acrylic.",
+    "imageTitle": "ombre-infinity.jpg"
   },
   {
     "name": "Fringed Plaid",
@@ -62,6 +62,31 @@ var products = [
 //  event.preventDefault();
 //}
 
+
+//ADD and REMOVE Buttons working
+function addButton(scarfName){
+  var cartArray = getCart();
+ for (var i = 0; i < products.length; i++) {
+   if (products[i].name == scarfName) {
+    cartArray.push(products[i]);
+     setCart(cartArray);
+     console.log(cartArray[cartArray.length - 1].name + " , is in the cart!");
+   }
+ } 
+  console.log(cartArray.length);
+}
+
+function removeButton(scarfName) {
+  var cartArray = getCart();
+  for (var i = 0; i < cartArray.length; i++) {
+    if (cartArray[i].name == scarfName) {
+    cartArray.splice(i, 1);
+      setCart(cartArray);
+      console.log(cartArray[cartArray.length - 1].name + " , was removed from the cart!");
+      return;
+   }
+ } 
+}
 //work on later, we worked on this in class(cart sum)
 function sumPrices(cartArray) {
   // for loop through array, sum value of price attribute for each object  
@@ -74,30 +99,39 @@ function sumPrices(cartArray) {
   console.log(total);
 }
 
-//js to add and delete items from cart
-var cartArray;
-cartArray = [];
-function addButton(scarfName) {
- for (var i = 0; i < products.length; i++) {
-   if (products[i].name == scarfName) {
-    cartArray.push(products[i]);
-     console.log(cartArray[i].name);
-   }
- } 
-  console.log(cartArray.length);
+function setCart(cartArray) {
+  localStorage.setItem("cartArray", JSON.stringify(cartArray));
 }
-function removeButton(scarfName) {
-  for (var i = 0; i < cartArray.length; i++) {
-   if (cartArray[i].name == scarfName) {
-    cartArray.splice(i, 1);
-      console.log(cartArray.length);
-     return;
-   }
- } 
+
+function getCart() {
+  var cartArray = JSON.parse(localStorage.getItem("cartArray"));
+  if (cartArray == null) {
+    return new Array();
+  } else {
+    return cartArray;
+  }
 }
 
 
-//function to sort items by selecting attribute( price and name)
+window.onload = function() {
+  var cartAmount= document.getElementById("cartAmount");
+  var cartArray = getCart();
+  console.log("window.onload");
+    if (cartArray.length >= 1) {
+      cartAmount.innerHTML = cartArray.length.toString();
+    } else {
+      cartAmount.innerHTML = "0";
+    }
+}
+
+//Filter Products
+//looks better than last time
+//hasn't worked yet continue to work on
+function filterProducts(){   
+console.log(document.sortBy.filter.value);
+event.preventDefault();
+}
+
 function comparePrice(a, b) {
   if (a.price < b.price) {
     return -1;
@@ -118,17 +152,15 @@ function compareName(a, b) {
   return 0;
 }
 
-function filterProducts() {
-  var sort_type = document.sortingFilter.filter.value;
-  if (sort_type == "price") {
+function filterProducts(){
+  var sort_type = document.sortBy.filter.value;
+  if (sort_type === "price") {
     console.log("Sorting By Price");
     products.sort(comparePrice);
-  }
-  else if (sort_type == "name") {
+  } else if (sort_type === "name") {
     console.log("Sorting By Name");
     products.sort(compareName);
   }
   console.log(products);
-  event.preventDefault();
+ event.preventDefault();
 }
-
