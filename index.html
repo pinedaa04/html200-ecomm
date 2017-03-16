@@ -28,8 +28,9 @@
         <li><a href="#">Hats</a></li>
         <li><a href="#">Gloves</a></li>
         <li><a href="#">Scarves</a></li>
-        <li class="cart-info">
-          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        <li class = "cart-info">
+          <i class="fa fa-shopping-cart" id="cartIcon" aria-hidden="true"></i>
+            <span id="cartAmount"></span>
         </li>
       </ul>
     </nav>
@@ -38,12 +39,12 @@
   </header>
 
   <aside>
-    <form name="sortingFilter" onSubmit="capture();">
+    <form name="sortingFilter" onSubmit="captureFilter();">
       <label>Filter By:
-        <select name="filter">
+        <select name="sortBy" id="sort">
           <option value="">Choose One</option>
-          <option value="price">Price</option>
-          <option value="name">Name</option>
+          <option value="price" onClick="comparePrice()">Price Low to High</option>
+          <option value="name" conClick="sortDivs()">Name</option>
         </select>
       </label>
 
@@ -54,31 +55,30 @@
   <section>
     <h2>Scarves</h2>
     <div class = "item-container">
-      
         <div class="col-sm-4 col-lg-3 col-centered">
-          <div class="item">
-            <h4>Ombre Infinity</h4>
-            <div class="photo-frame">
-          <img srcset="images/ombre-infinity100.jpg 100w, images/ombre-infinity200.jpg 200w, images/ombre-infinity300.jpg 300w"
-            sizes="(max-width: 800px) 100px, (max-width: 1600px) 200px, (min-width: 1601px) 300px"
-            src="images/ombre-infinity.jpg" alt="Brown Ombre Scarf"/>
-          </div>
-            <h5>$26.99</h5>
-            <p>Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</p>
-           <div>
-              <form onclick="addButton('Ombre Infinity')" name="addToCart">
+         <div class="item">
+          <h4>Reversible Plaid</h4>
+           <div class="photo-frame">
+               <img srcset="images/reversible-plaid100.jpg 100w, images/reversible-plaid200.jpg 200w, images/reversible-plaid300.jpg 300w" 
+                sizes="(max-width: 800px) 100px, (max-width: 1600px) 200px, (min-width: 1601px) 300px"
+                src="images/reversible-plaid.jpg" alt="Plaid Resersible Red and White Scarf"/>
+              </div>
+          <h5>$26.99</h5>
+          <p>Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</p>
+          <div>
+              <form onclick="addButton('Reversible Plaid')" name="addToCart">
                 <label> 
                   <input type="submit" value="Add to Cart">
                 </label>
               </form>
-               <form onclick="removeButton('Ombre Infinity)" name="removeFromCart">
+               <form onclick="removeButton('Reversible Plaid')" name="removeFromCart">
                 <label> 
                   <input type="submit" value="Remove from Cart">
                 </label>
               </form>
             </div>
         </div>
-          </div>
+      </div>
       
        <div class="col-sm-4 col-lg-3 col-centered">
         <div class="item">
@@ -131,22 +131,22 @@
         </div>
           
         <div class="col-sm-4 col-lg-3 col-centered">
-        <div class="item">
-          <h4>Reversible Plaid</h4>
-           <div class="photo-frame">
-               <img srcset="images/reversible-plaid100.jpg 100w, images/reversible-plaid200.jpg 200w, images/reversible-plaid300.jpg 300w" 
-                sizes="(max-width: 800px) 100px, (max-width: 1600px) 200px, (min-width: 1601px) 300px"
-                src="images/reversible-plaid.jpg" alt="Plaid Resersible Red and White Scarf"/>
-              </div>
-          <h5>$26.99</h5>
-          <p>Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</p>
-          <div>
-              <form onclick="addButton('Reversible Plaid')" name="addToCart">
+          <div class="item">
+            <h4>Ombre Infinity</h4>
+            <div class="photo-frame">
+          <img srcset="images/ombre-infinity100.jpg 100w, images/ombre-infinity200.jpg 200w, images/ombre-infinity300.jpg 300w"
+            sizes="(max-width: 800px) 100px, (max-width: 1600px) 200px, (min-width: 1601px) 300px"
+            src="images/ombre-infinity.jpg" alt="Brown Ombre Scarf"/>
+          </div>
+            <h5>$26.99</h5>
+            <p>Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</p>
+           <div>
+              <form onclick="addButton('Ombre Infinity')" name="addToCart">
                 <label> 
                   <input type="submit" value="Add to Cart">
                 </label>
               </form>
-               <form onclick="removeButton('Reversible Plaid')" name="removeFromCart">
+               <form onclick="removeButton('Ombre Infinity')" name="removeFromCart">
                 <label> 
                   <input type="submit" value="Remove from Cart">
                 </label>
@@ -166,7 +166,7 @@
           <h5>$19.99</h5>
           <p>Generously sized, extra soft and featuring a dazzling fringe, this scarf is rendered in a versatile gray, black and white plaid. Expertly beat the cold with style. 100% acrylic.</p>
           <div>
-              <form onclick="addButton('Fringed Plaid')" name="addToCart">
+                 <form onclick="addButton('Fringed Plaid')" name="addToCart">
                 <label> 
                   <input type="submit" value="Add to Cart">
                 </label>
@@ -191,12 +191,12 @@
           <h5>$22.99</h5>
           <p>The Who What Wear Oversize Color-Block Square Scarf is big, bold, and designed to twist and wrap any way you wish. All the colors of the season are harmonized in this oversize accent, so you can adjust to contrast or match your outfit; soft and lush, it’s your stylish standoff against cold AC and unexpected fall breezes. 100% acrylic.</p>
           <div>
-              <form onclick="addButton('Muli Color')" name="addToCart">
+              <form onclick="addButton('MuliColor')" name="addToCart">
                 <label> 
                   <input type="submit" value="Add to Cart">
                 </label>
               </form>
-               <form onclick="removeButton('Multi Color')" name="removeFromCart">
+               <form onclick="removeButton('MultiColor')" name="removeFromCart">
                 <label> 
                   <input type="submit" value="Remove from Cart">
                 </label>
