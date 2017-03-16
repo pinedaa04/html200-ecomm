@@ -110,7 +110,12 @@ h4 {
   letter-spacing: 0.05rem;
     font-size: 2rem;
 }
-
+@media screen and (max-width: 767px) and (min-width: 551px) {
+  h5 {
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+}
 h5 {
   font-family: 'Sansita', sans-serif;
   font-size: 1rem;
@@ -125,7 +130,7 @@ h5 {
 @media screen and (max-width: 767px) and (min-width: 551px) {
   h5 {
     padding-right: 1rem;
-    font-size: .5rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -149,7 +154,7 @@ p {
 
 @media screen and (max-width: 767px) and (min-width: 551px) {
   p {
-    font-size: .5rem;
+    font-size: 1.2rem;
     width: 50%;
     margin: auto;
   }
